@@ -1,13 +1,13 @@
-import React, { forwardRef, ElementType, HTMLAttributes, FC, ComponentProps  } from 'react'
+import React, { forwardRef, ElementType, HTMLAttributes, FC, ComponentProps } from 'react'
 import classnames from 'classnames'
 import { Colors, Sizes, StyleOrState } from '../../utils/modifiers'
 import { ButtonProps } from 'types/button'
 import { ColorProps } from 'types/colors'
 import htmlAttributes, { ariaAttributes, allAttributes } from '../../utils/element-attributes'
 
-  const cleanProps = (tag: string, props:any ) => {
-    const castedProps = props as Record<string, string>
-    return htmlAttributes['*']
+const cleanProps = (tag: string, props: any) => {
+  const castedProps = props as Record<string, string>
+  return htmlAttributes['*']
     .concat(htmlAttributes[tag] || [])
     .concat(ariaAttributes)
     .reduce((objs: Record<string, string>, current: string) => {
@@ -15,7 +15,7 @@ import htmlAttributes, { ariaAttributes, allAttributes } from '../../utils/eleme
         objs[current] = castedProps[current]
       }
       return objs
-    }, {});
+    }, {})
 }
 export const Button: FC<BaseProps & ButtonProps & ColorProps> = ({
   className,
@@ -80,17 +80,36 @@ export const Button: FC<BaseProps & ButtonProps & ColorProps> = ({
     }),
   }
 
+  console.log(
+    'classes color',
+    Colors({
+      isPrimary,
+      isSuccess,
+      isInfo,
+      isWarning,
+      isDanger,
+      isLink,
+      isLight,
+      isDark,
+      isBlack,
+      isText,
+      isWhite,
+      isInverted,
+      isOutlined,
+      isSelected,
+    })
+  )
+  console.log('isSuccess', isSuccess)
   if (isStatic) {
     return (
-      <span className={classnames('button', className, classes)} {...cleanProps('span', props)} >
+      <span className={classnames('button', className, classes)} {...cleanProps('span', props)}>
         {children}
       </span>
     )
   }
   if (isAnchor) {
-
     return (
-      <a className={classnames('button', className, classes)} {...cleanProps('a', props) }>
+      <a className={classnames('button', className, classes)} {...cleanProps('a', props)}>
         {children}
       </a>
     )
@@ -100,7 +119,7 @@ export const Button: FC<BaseProps & ButtonProps & ColorProps> = ({
     return (
       <input
         className={classnames('button', className, classes)}
-        {...cleanProps('input', props)} 
+        {...cleanProps('input', props)}
         type="submit"
         value={children?.toString()}
       />
@@ -110,14 +129,14 @@ export const Button: FC<BaseProps & ButtonProps & ColorProps> = ({
     return (
       <input
         className={classnames('button', className, classes)}
-        {...cleanProps('input', props)} 
+        {...cleanProps('input', props)}
         type="reset"
         value={children?.toString()}
       />
     )
   }
   return (
-    <button className={classnames('button', className, classes)} {...cleanProps('button', props)} >
+    <button className={classnames('button', className, classes)} {...cleanProps('button', props)}>
       {children}
     </button>
   )
@@ -127,17 +146,17 @@ Button.propTypes = {}
 
 export default Button
 
-export interface ButtonsProps extends HTMLAttributes<HTMLButtonElement>  {
-    children?: React.ReactNode
-    className?: string
-    areSmall?: boolean
-    areMedium?: boolean
-    areLarge?: boolean
-    hasAddons?: boolean
-    isCentered?: boolean
-    isRight?: boolean
-  }
-export const Buttons: FC<ButtonsProps>  = ({
+export interface ButtonsProps extends HTMLAttributes<HTMLButtonElement> {
+  children?: React.ReactNode
+  className?: string
+  areSmall?: boolean
+  areMedium?: boolean
+  areLarge?: boolean
+  hasAddons?: boolean
+  isCentered?: boolean
+  isRight?: boolean
+}
+export const Buttons: FC<ButtonsProps> = ({
   className,
   children,
   areSmall,
@@ -155,18 +174,16 @@ export const Buttons: FC<ButtonsProps>  = ({
     'is-centered': isCentered,
     'is-right': isRight,
   }
-  return (
-    <div className={classnames('buttons', className, sized)}>{children}</div>
-  )
+  return <div className={classnames('buttons', className, sized)}>{children}</div>
 }
 
-export interface BaseProps extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement>  {
-    as?: ElementType;
-    children?: React.ReactNode
-    className?: string
-    isSpaced?: boolean
-    status?: 'inactive' | 'inProgress' | 'success' | 'failed'
-    value?: string | number | Error
-    href?: string
-    onClick?: (e:React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
-  }
+export interface BaseProps extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
+  as?: ElementType
+  children?: React.ReactNode
+  className?: string
+  isSpaced?: boolean
+  status?: 'inactive' | 'inProgress' | 'success' | 'failed'
+  value?: string | number | Error
+  href?: string
+  onClick?: (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void
+}
