@@ -31,19 +31,3 @@ exports[`Container component should render with isDanger 1`] = `
   Danger Control
 </footer>
 `;
-
-exports[`Container component should render with isGrouped 1`] = `
-<footer
-  class="footer is-danger"
->
-  Danger Control
-</footer>
-`;
-
-exports[`Container component should render with isSmall 1`] = `
-<footer
-  class="footer is-active"
->
-  Active Control
-</footer>
-`;
