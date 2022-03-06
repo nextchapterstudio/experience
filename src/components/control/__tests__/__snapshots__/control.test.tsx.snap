@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container component should render 1`] = `
+<div
+  class="control"
+>
+  Some Text
+</div>
+`;
+
+exports[`Container component should render with extra classnames 1`] = `
+<div
+  class="control contained"
+>
+  Contained Text
+</div>
+`;
+
+exports[`Container component should render with isGrouped 1`] = `
+<div
+  class="control is-grouped"
+>
+  Grouped Control
+</div>
+`;
+
+exports[`Container component should render with isSmall 1`] = `
+<div
+  class="control is-expanded"
+>
+  Expanded Control
+</div>
+`;

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Columns Component should render correct structure  1`] = `
+<div>
+  <div
+    class="columns"
+  >
+    <div
+      class="column is-offset-4"
+    >
+      Offset
+    </div>
+  </div>
+</div>
+`;
+
+exports[`The Columns Component should render correct structure  2`] = `
+<div
+  class="columns"
+>
+  <div
+    class="column is-offset-4"
+  >
+    Offset
+  </div>
+</div>
+`;
+
+exports[`The Columns Component should render correct structure for the FullColumn 1`] = `
+<div>
+  <div
+    class="columns"
+  >
+    <div
+      class="column is-full"
+    >
+      Offset
+    </div>
+  </div>
+</div>
+`;
+
+exports[`The Columns Component should render correct structure for the FullColumn 2`] = `
+<div
+  class="columns"
+>
+  <div
+    class="column is-full"
+  >
+    Offset
+  </div>
+</div>
+`;

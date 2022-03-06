@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Collapse Component should render a div with the class collapsed 1`] = `
+<div>
+  <div
+    class="collapsed animated animation fadeIn"
+  >
+    test
+  </div>
+</div>
+`;
+
+exports[`The Collapse Component should render a div with the class collapsed 2`] = `
+<div
+  class="collapsed animated animation fadeIn"
+>
+  test
+</div>
+`;

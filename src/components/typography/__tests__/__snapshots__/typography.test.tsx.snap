@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Typography Component should render a div with the class basic 1`] = `
+<div>
+  <span
+    class="typography basic"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`The Typography Component should render a div with the class basic 2`] = `
+<span
+  class="typography basic"
+>
+  test
+</span>
+`;
+
+exports[`The Typography Component should render a div with the html attribute 1`] = `
+<div>
+  <span
+    aria-hidden="true"
+    class="typography basic"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`The Typography Component should render a div with the html attribute 2`] = `
+<span
+  aria-hidden="true"
+  class="typography basic"
+>
+  test
+</span>
+`;
+
+exports[`The Typography Component should render a span with the class basic 1`] = `
+<div>
+  <span
+    class="typography basic"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`The Typography Component should render a span with the class basic 2`] = `
+<span
+  class="typography basic"
+>
+  test
+</span>
+`;
+
+exports[`The Typography Component should render as a p tag 1`] = `
+<div>
+  <p
+    class="typography basic"
+  >
+    test
+  </p>
+</div>
+`;

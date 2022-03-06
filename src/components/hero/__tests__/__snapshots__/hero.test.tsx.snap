@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Hero Component should render A Full Hero with just the hero 1`] = `
+<div>
+  <section
+    class="hero"
+  >
+    <div
+      class="hero-body"
+    >
+      test
+    </div>
+  </section>
+</div>
+`;
+
+exports[`The Hero Component should render A Full Hero with just the hero 2`] = `
+<section
+  class="hero"
+>
+  <div
+    class="hero-body"
+  >
+    test
+  </div>
+</section>
+`;
+
+exports[`The Hero Component should render A Hero with the head body and footer 1`] = `
+<section
+  class="hero"
+>
+  <div
+    class="hero-head"
+  >
+    The Head
+  </div>
+  <div
+    class="hero-body"
+  >
+    Body
+  </div>
+  <div
+    class="hero-foot"
+  >
+    Foot
+  </div>
+</section>
+`;
+
+exports[`The Hero Component should render A Hero with the head element 1`] = `
+<div>
+  <section
+    class="hero"
+  >
+    <div
+      class="hero-head"
+    >
+      The Head
+    </div>
+  </section>
+</div>
+`;
+
+exports[`The Hero Component should render A Hero with the head element 2`] = `
+<section
+  class="hero"
+>
+  <div
+    class="hero-head"
+  >
+    The Head
+  </div>
+</section>
+`;

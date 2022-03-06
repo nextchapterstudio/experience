@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Box Component should render with the class basic 1`] = `
+<div>
+  <div
+    class="box basic"
+  >
+    test
+  </div>
+</div>
+`;
+
+exports[`The Box Component should render with the class basic 2`] = `
+<div
+  class="box basic"
+>
+  test
+</div>
+`;

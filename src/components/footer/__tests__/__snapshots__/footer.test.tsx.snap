@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container component should render 1`] = `
+<footer
+  class="footer"
+>
+  Some Text
+</footer>
+`;
+
+exports[`Container component should render with extra classnames 1`] = `
+<footer
+  class="footer contained"
+>
+  Contained Text
+</footer>
+`;
+
+exports[`Container component should render with isActive 1`] = `
+<footer
+  class="footer is-active"
+>
+  Active Control
+</footer>
+`;
+
+exports[`Container component should render with isDanger 1`] = `
+<footer
+  class="footer is-danger"
+>
+  Danger Control
+</footer>
+`;
+
+exports[`Container component should render with isGrouped 1`] = `
+<footer
+  class="footer is-danger"
+>
+  Danger Control
+</footer>
+`;
+
+exports[`Container component should render with isSmall 1`] = `
+<footer
+  class="footer is-active"
+>
+  Active Control
+</footer>
+`;

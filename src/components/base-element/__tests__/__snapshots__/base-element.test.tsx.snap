@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Base Element Component should add an onclick 1`] = `
+<div>
+  <div
+    class="basic"
+  >
+    test
+  </div>
+</div>
+`;
+
+exports[`The Base Element Component should render a div with the class basic 1`] = `
+<div>
+  <div
+    class="basic"
+  >
+    test
+  </div>
+</div>
+`;
+
+exports[`The Base Element Component should render a div with the class basic 2`] = `
+<div
+  class="basic"
+>
+  test
+</div>
+`;
+
+exports[`The Base Element Component should render a div with the html attribute 1`] = `
+<div>
+  <div
+    aria-hidden="true"
+    class="basic"
+  >
+    test
+  </div>
+</div>
+`;
+
+exports[`The Base Element Component should render a div with the html attribute 2`] = `
+<div
+  aria-hidden="true"
+  class="basic"
+>
+  test
+</div>
+`;
+
+exports[`The Base Element Component should render a span with the class basic 1`] = `
+<div>
+  <span
+    class="basic"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`The Base Element Component should render a span with the class basic 2`] = `
+<span
+  class="basic"
+>
+  test
+</span>
+`;
+
+exports[`The Base Element Component should render as a p tag 1`] = `
+<div>
+  <p
+    class="basic"
+  >
+    test
+  </p>
+</div>
+`;

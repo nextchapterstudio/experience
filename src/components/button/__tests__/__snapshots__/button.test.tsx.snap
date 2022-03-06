@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Button Component should render a button with an aria attribute 1`] = `
+<div>
+  <button
+    aria-hidden="true"
+    class="button"
+  >
+    test
+  </button>
+</div>
+`;
+
+exports[`The Button Component should render a span when isStatic 1`] = `
+<div>
+  <span
+    class="button"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`The Button Component should render a span when isStatic 2`] = `
+<span
+  class="button"
+>
+  test
+</span>
+`;
+
+exports[`The Button Component should render as an anchor tag 1`] = `
+<div>
+  <a
+    class="button"
+  >
+    test
+  </a>
+</div>
+`;
+
+exports[`The Button Component should render as an input tag when isSubmit 1`] = `
+<div>
+  <input
+    class="button"
+    type="submit"
+    value="test"
+  />
+</div>
+`;
+
+exports[`The Button Component should render the Buttons as correct elements 1`] = `
+<div
+  class="buttons"
+>
+  <button
+    class="button"
+  >
+    Button
+  </button>
+  <input
+    class="button"
+    type="submit"
+    value="Submit"
+  />
+  <a
+    class="button"
+    href="#"
+  >
+    Anchor
+  </a>
+  <input
+    class="button"
+    type="reset"
+    value="Reset"
+  />
+</div>
+`;
+
+exports[`The Button Component should render the Buttons with colored classes applied 1`] = `
+<div
+  class="buttons"
+>
+  <button
+    class="button is-primary"
+  >
+    Primary
+  </button>
+  <button
+    class="button is-info"
+  >
+    Info
+  </button>
+  <button
+    class="button is-danger"
+  >
+    Danger
+  </button>
+  <button
+    class="button is-link"
+  >
+    Link
+  </button>
+  <button
+    class="button is-warning"
+  >
+    Warning
+  </button>
+  <button
+    class="button is-success"
+  >
+    Success
+  </button>
+</div>
+`;
+
+exports[`The Button Component should render with the class basic 1`] = `
+<div>
+  <button
+    class="button basic"
+  >
+    test
+  </button>
+</div>
+`;
+
+exports[`The Button Component should render with the class basic 2`] = `
+<button
+  class="button basic"
+>
+  test
+</button>
+`;
+
+exports[`The Button Component should support an onclick function 1`] = `
+<div>
+  <button
+    class="button"
+  >
+    The Button
+  </button>
+</div>
+`;

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card and components should render 1`] = `
+<div
+  class="card"
+>
+  <div
+    class="card-content"
+  >
+    Hi
+  </div>
+</div>
+`;
+
+exports[`Card and components should render with footer header and body 1`] = `
+<div
+  class="card"
+>
+  <header
+    class="card-header"
+  >
+    <p
+      class="card-header-title"
+    >
+      HEADER
+    </p>
+  </header>
+  <div
+    class="card-content"
+  >
+    Hi
+  </div>
+  <footer
+    class="card-footer"
+  />
+</div>
+`;
+
+exports[`Card and components should render with header and footer and body 1`] = `
+<div
+  class="card"
+>
+  <header
+    class="card-header"
+  >
+    <p
+      class="card-header-title"
+    >
+      HEADER
+    </p>
+  </header>
+  <div
+    class="card-content"
+  >
+    Hi
+  </div>
+  <footer
+    class="card-footer"
+  />
+</div>
+`;
