@@ -1,13 +1,6 @@
 import React, { useState, createContext, useContext, useCallback, FC } from 'react'
 import classnames from 'classnames'
 
-export const useToggle = (initialValue: boolean) => {
-  const [toggleValue, setToggleValue] = useState(initialValue)
-  const toggler = useCallback(() => setToggleValue(!toggleValue), [])
-
-  return [toggleValue, toggler]
-}
-
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 export const ModalContext = createContext({ isShown: false, closeModal: () => {} })
 
