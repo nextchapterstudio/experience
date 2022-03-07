@@ -168,8 +168,11 @@ export const BaseIcon: FC<IconProps> = ({
     ></i>
   )
 }
-
-export const StackedIcons: FC<IconProps & HasTextProps & SizeProps> = ({
+export interface StackedIconProps extends IconProps {
+  is3x?: boolean
+  is4x?: boolean
+}
+export const StackedIcons: FC<StackedIconProps & HasTextProps & SizeProps> = ({
   children,
   className,
   isSmall,
