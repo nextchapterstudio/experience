@@ -1,10 +1,15 @@
-import React, { FC } from 'react'
+import React, { FC, ElementType, ReactNode } from 'react'
 import classnames from 'classnames'
 import { BaseElement } from '../base-element'
 
 export interface ContainerProps {
-    children?: React.ReactNode
-    className?: string
+  as?: ElementType
+  children?: ReactNode
+  className?: string
+  isMobile?: boolean
+  isFluid?: boolean
+  isWideScreen?: boolean
+  isFullHD?: boolean
 }
 export const Container: FC<ContainerProps> = ({ className, children, ...props }) => {
   return (
