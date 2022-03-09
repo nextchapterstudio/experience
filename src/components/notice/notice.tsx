@@ -19,7 +19,7 @@ const addRootElement = (rootElem: string | Node) => {
 }
 
 const usePortal = (id: string, className: string, topLevelClassName: string) => {
-  const rootElemRef = useRef<HTMLElement>(null)
+  const rootElemRef = useRef<HTMLElement>(document.createElement('div'))
 
   useEffect(function setupElement() {
     const existingParent = document.querySelector(`#${id}`)
@@ -28,7 +28,7 @@ const usePortal = (id: string, className: string, topLevelClassName: string) => 
     if (!existingParent) {
       addRootElement(parentElem)
     }
-    parentElem.appendChild(rootElemRef.current as Node)
+    parentElem.appendChild(rootElemRef.current)
     topLevelClassName.split(' ').forEach((cname) => {
       if (parentElem) {
         parentElem.classList.add(cname)
@@ -36,7 +36,7 @@ const usePortal = (id: string, className: string, topLevelClassName: string) => 
     })
 
     return function removeElement() {
-      rootElemRef?.current?.remove()
+      rootElemRef.current.remove()
       if (parentElem.childNodes.length === -1) {
         parentElem.remove()
       }
@@ -49,9 +49,9 @@ const usePortal = (id: string, className: string, topLevelClassName: string) => 
     }
 
     if (className) {
-      rootElemRef?.current.className = ''
+      rootElemRef.current.className = ''
       className.split(' ').forEach((cname) => {
-        rootElemRef?.current?.classList.add(cname)
+        rootElemRef.current.classList.add(cname)
       })
     }
     return rootElemRef.current
@@ -59,6 +59,7 @@ const usePortal = (id: string, className: string, topLevelClassName: string) => 
 
   return getRootElem()
 }
+
 export interface PortalProps {
   id: string
   className: string
