@@ -7,7 +7,7 @@ export interface DropDownListItem {
   id: string | number
 }
 
-export interface DropDownPros {
+export interface DropDownProps {
   list: DropDownListItem[]
   onSelect: (arg0: DropDownListItem) => void
   onValueChange?: (arg0: DropDownListItem) => void
@@ -16,7 +16,7 @@ export interface DropDownPros {
   isUp: boolean
 }
 
-export const DropDown: FC<DropDownPros> = ({ list, onSelect, label, className, isUp }) => {
+export const DropDown: FC<DropDownProps> = ({ list, onSelect, label, className, isUp }) => {
   const [dropDownIsShown, setDropDownIsShown] = useState(false)
   const mappedItems = list.map((item, index) => {
     if (!item) {
