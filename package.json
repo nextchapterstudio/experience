@@ -7,7 +7,10 @@
     "rollup": "rollup -c",
     "lint": "eslint --ignore-path .gitignore './**/*.{ts,tsx}' --fix",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "preversion": "npm run rollup",
+    "postversion": "npm publish --access=public",
+    "postpublish": "git push origin --all --follow-tags"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
