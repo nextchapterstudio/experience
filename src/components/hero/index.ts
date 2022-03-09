@@ -1,1 +1,1 @@
-export { Hero, HeroBody, HeroFooter, HeroHead, HeroContext } from './hero'
+export * from './hero'
