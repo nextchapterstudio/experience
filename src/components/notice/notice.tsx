@@ -51,7 +51,7 @@ const usePortal = (id: string, className: string, topLevelClassName: string) => 
     if (className) {
       rootElemRef.current.className = ''
       className.split(' ').forEach((cname) => {
-        rootElemRef.current.classList.add(cname)
+        rootElemRef?.current?.classList.add(cname)
       })
     }
     return rootElemRef.current

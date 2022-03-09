@@ -7,7 +7,7 @@ export interface MessageHeaderProps {
   children?: React.ReactNode
   className?: string
   hasDelete?: boolean
-  onDeleteClick: () => void
+  onDeleteClick: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 export interface MessageContextProps {
   isSmall?: boolean
@@ -52,7 +52,7 @@ export const MessageHeader: FC<MessageHeaderProps> = ({
 MessageHeader.defaultProps = {
   hasDelete: true,
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onDeleteClick: () => {},
+  onDeleteClick: (e: React.MouseEvent<HTMLButtonElement>) => {},
 }
 export interface MessageBodyProps {
   children?: React.ReactNode
