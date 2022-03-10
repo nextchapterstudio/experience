@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, HTMLAttributes, TdHTMLAttributes } from 'react'
 import classnames from 'classnames'
 
 export interface TableProps {
@@ -46,9 +46,11 @@ export default Table
 export interface TableElementProps {
   className?: string
 }
-export const TableHead: FC<TableElementProps> = ({ className, children, ...props }) => {
-  const classes = classnames(className)
-
+export const TableHead: FC<TableElementProps & HTMLAttributes<HTMLTableSectionElement>> = ({
+  className,
+  children,
+  ...props
+}) => {
   return (
     <thead className={classnames(className)} {...props}>
       {children}
@@ -56,7 +58,11 @@ export const TableHead: FC<TableElementProps> = ({ className, children, ...props
   )
 }
 
-export const TableFoot: FC<TableElementProps> = ({ className, children, ...props }) => {
+export const TableFoot: FC<TableElementProps & HTMLAttributes<HTMLTableSectionElement>> = ({
+  className,
+  children,
+  ...props
+}) => {
   return (
     <tfoot className={classnames(className)} {...props}>
       {children}
@@ -64,7 +70,11 @@ export const TableFoot: FC<TableElementProps> = ({ className, children, ...props
   )
 }
 
-export const TableRow: FC<TableElementProps> = ({ className, children, ...props }) => {
+export const TableRow: FC<TableElementProps & HTMLAttributes<HTMLTableRowElement>> = ({
+  className,
+  children,
+  ...props
+}) => {
   return (
     <tr className={classnames(className)} {...props}>
       {children}
@@ -72,7 +82,11 @@ export const TableRow: FC<TableElementProps> = ({ className, children, ...props 
   )
 }
 
-export const TableHeaderCell: FC<TableElementProps> = ({ className, children, ...props }) => {
+export const TableHeaderCell: FC<TableElementProps & HTMLAttributes<HTMLTableCellElement>> = ({
+  className,
+  children,
+  ...props
+}) => {
   return (
     <th className={classnames(className)} {...props}>
       {children}
@@ -80,7 +94,14 @@ export const TableHeaderCell: FC<TableElementProps> = ({ className, children, ..
   )
 }
 
-export const TableCell: FC<TableElementProps> = ({ className, children, ...props }) => {
+export interface TableCellProps {
+  className?: string
+}
+export const TableCell: FC<TableElementProps & HTMLAttributes<HTMLTableCellElement>> = ({
+  className,
+  children,
+  ...props
+}) => {
   return (
     <td className={classnames(className)} {...props}>
       {children}
@@ -88,7 +109,11 @@ export const TableCell: FC<TableElementProps> = ({ className, children, ...props
   )
 }
 
-export const TableBody: FC<TableElementProps> = ({ className, children, ...props }) => {
+export const TableBody: FC<TableElementProps & HTMLAttributes<HTMLTableSectionElement>> = ({
+  className,
+  children,
+  ...props
+}) => {
   return (
     <tbody className={classnames(className)} {...props}>
       {children}
@@ -96,7 +121,11 @@ export const TableBody: FC<TableElementProps> = ({ className, children, ...props
   )
 }
 
-export const TableContainer: FC<TableElementProps> = ({ className, children, ...props }) => {
+export const TableContainer: FC<TableElementProps & HTMLAttributes<HTMLDivElement>> = ({
+  className,
+  children,
+  ...props
+}) => {
   const classes = classnames('table-container', className)
   return (
     <div className={classes} {...props}>

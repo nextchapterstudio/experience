@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import classnames from 'classnames'
-import { Colors, ColorProps } from '../../utils/modifiers'
+import { Colors, ColorProps, HasTextProps, HasText } from '../../utils/modifiers'
 
 const isColored = (...args: any[]) => {
   return args.some((item) => item)
@@ -16,7 +16,7 @@ export interface TileProps {
   isNotification?: boolean
   isBox?: boolean
 }
-export const Tile: FC<TileProps & ColorProps> = ({
+export const Tile: FC<TileProps & ColorProps & HasTextProps> = ({
   children,
   className,
   isPrimary,
@@ -37,6 +37,7 @@ export const Tile: FC<TileProps & ColorProps> = ({
   isNotification,
   isBox,
   size,
+  ...props
 }) => {
   const classes = {
     'is-ancestor': isAncestor,
@@ -57,6 +58,7 @@ export const Tile: FC<TileProps & ColorProps> = ({
     'is-12': false,
     box: isBox,
     notification: isNotification,
+    ...HasText(props),
     ...Colors({
       isPrimary,
       isSuccess,
