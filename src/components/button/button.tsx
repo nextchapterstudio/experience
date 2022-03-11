@@ -17,7 +17,10 @@ const cleanProps = (tag: string, props: any) => {
       return objs
     }, {})
 }
-export const Button: FC<ButtonProps & BaseButtonProps & ColorProps> = ({
+
+export const Button: FC<
+  ButtonProps & BaseButtonProps & ColorProps & HTMLAttributes<HTMLButtonElement>
+> = ({
   className,
   isPrimary,
   isSuccess,
