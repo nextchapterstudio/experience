@@ -37,6 +37,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 export const HeroTemplate = () => {
   useStyleSheet('hero.css')
   useScript('fa.js')
+  useStyleSheet('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
   return (
     <>
       <Hero isInfo isMedium isBold className="hero is-info is-medium is-bold">
