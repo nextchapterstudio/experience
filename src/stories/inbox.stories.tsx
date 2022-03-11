@@ -114,8 +114,10 @@ export const InboxTemplate = () => {
       <NavBar className="has-shadow">
         <Container className="container">
           <NavBarBrand
-            src="brightleafjs-logo.png"
-            alt="Brightleat Elements: React and Bulma powered UI framework"
+            width={48}
+            height={48}
+            src="logo-larger.png"
+            alt="Next Chapter Experience: React and Bulma powered UI framework"
             onClick={(e) => {
               setMenu(!menu)
             }}
