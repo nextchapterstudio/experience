@@ -1,7 +1,7 @@
-import React, { ElementType, FC, ReactNode } from 'react'
+import React, { ElementType, FC, ReactNode, HTMLAttributes } from 'react'
 import classnames from 'classnames'
 
-export interface ColumnsProps {
+export interface ColumnsProps extends HTMLAttributes<HTMLOrSVGElement> {
   children?: React.ReactNode
   className?: string
   isMobile?: boolean
@@ -18,6 +18,7 @@ export const Columns: FC<ColumnsProps> = ({
   isCentered,
   isNarrow,
   isGapless,
+  ...props
 }) => {
   const classes = {
     'is-mobile': isMobile,
@@ -27,7 +28,11 @@ export const Columns: FC<ColumnsProps> = ({
     'is-gapless': isGapless,
   }
 
-  return <div className={classnames('columns', className, classes)}>{children}</div>
+  return (
+    <div className={classnames('columns', className, classes)} {...props}>
+      {children}
+    </div>
+  )
 }
 Columns.defaultProps = {
   className: '',
@@ -38,7 +43,7 @@ Columns.defaultProps = {
   isGapless: false,
 }
 
-export interface ColumnProps {
+export interface ColumnProps extends HTMLAttributes<HTMLOrSVGElement> {
   as?: ElementType
   children?: ReactNode
   className?: string
@@ -60,6 +65,7 @@ export interface ColumnProps {
   isOffsetHalf?: boolean
   isOffsetOneThird?: boolean
   isHidden?: boolean
+  isFullheight?: boolean
   offset?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | null
   size?: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' | null
 }
@@ -86,6 +92,8 @@ export const Column: FC<ColumnProps> = ({
   offset,
   size,
   is,
+  isFullheight,
+  ...props
 }) => {
   const classes = {
     'is-four-fifths': isFourFifths,
@@ -127,6 +135,7 @@ export const Column: FC<ColumnProps> = ({
     'is-offset-9': false,
     'is-offset-10': false,
     'is-offset-11': false,
+    'is-full-height': isFullheight,
   }
   if (size) {
     classes[`is-${size}`] = true
@@ -140,7 +149,11 @@ export const Column: FC<ColumnProps> = ({
   if (size && is) {
     console.warn('Do not use both size and is')
   }
-  return <Col className={classnames('column', className, classes)}>{children}</Col>
+  return (
+    <Col className={classnames('column', className, classes)} {...props}>
+      {children}
+    </Col>
+  )
 }
 
 Column.defaultProps = {

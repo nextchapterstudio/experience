@@ -10,6 +10,7 @@ export interface ContainerProps {
   isFluid?: boolean
   isWideScreen?: boolean
   isFullHD?: boolean
+  hasTextCentered?: boolean
 }
 export const Container: FC<ContainerProps> = ({ className, children, ...props }) => {
   return (

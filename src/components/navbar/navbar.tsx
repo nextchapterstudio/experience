@@ -132,7 +132,7 @@ export interface NavProps {
   className?: string
 }
 export interface NavBarMenuProps {
-  id: string
+  id?: string
   isActive?: boolean
 }
 export const NavBarStart: FC<NavProps> = ({ children, className }) => {
