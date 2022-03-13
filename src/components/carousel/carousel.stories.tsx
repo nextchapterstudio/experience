@@ -8,7 +8,7 @@ import { Hero, Image } from '..'
 import './stories.css'
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Multi Carousel',
+  title: 'Example/Carousel',
   component: Carousel,
 } as ComponentMeta<typeof Carousel>
 
