@@ -22,3 +22,29 @@ DefaultIcon.args = {
   icon: 'home',
   fa: true,
 }
+export const ChevronRightIcon = Template.bind({})
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+ChevronRightIcon.args = {
+  icon: 'chevron-right',
+  fa: true,
+}
+
+export const ChevronLeftIcon = Template.bind({})
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+ChevronLeftIcon.args = {
+  icon: 'chevron-left',
+  fa: true,
+}
+
+export const CogIcon = Template.bind({})
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+CogIcon.args = {
+  icon: 'cog',
+  fa: true,
+}
+export const CogsIcon = Template.bind({})
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+CogsIcon.args = {
+  icon: 'cogs',
+  fas: true,
+}
