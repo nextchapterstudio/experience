@@ -118,5 +118,5 @@ const ShowMultipleSlidesTemplate: ComponentStory<typeof Carousel> = (args) => (
 export const ShowMultipleSlidesExample = ShowMultipleSlidesTemplate.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 ShowMultipleSlidesExample.args = {
-  slidesToShow: 1,
+  slidesToShow: 2,
 }
