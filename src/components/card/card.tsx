@@ -10,7 +10,7 @@ export interface CardBaseProps extends HTMLAttributes<HTMLOrSVGElement> {
 export interface CardHeaderIconProps extends HTMLAttributes<HTMLOrSVGElement> {
   className?: string
   children?: React.ReactNode
-  onClick?: () => void
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
 }
 
 export const CardHeaderIcon: FC<CardHeaderIconProps> = ({ children, onClick, ...props }) => {
