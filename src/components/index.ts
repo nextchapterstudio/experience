@@ -1,5 +1,6 @@
 export * from './autocomplete'
 export * from './base-element'
+export * from './block'
 export * from './box'
 export * from './breadcrumb'
 export * from './button'

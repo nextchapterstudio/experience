@@ -1,26 +1,35 @@
-import React, {  useEffect, useRef, forwardRef, ElementType, HTMLAttributes, FC, ComponentProps  } from 'react'
+import React, {
+  useEffect,
+  useRef,
+  forwardRef,
+  ElementType,
+  HTMLAttributes,
+  FC,
+  ComponentProps,
+} from 'react'
 import classnames from 'classnames'
 import { BaseElement } from '../base-element'
+import { ColorProps } from '../../utils'
 
-export interface CollapseProps extends HTMLAttributes<HTMLOrSVGElement>  {
-    className?: string
-    isShown?: boolean
-    children?: React.ReactNode
-    animationIn?: string
-    animationOut?: string
-    onClick?: () => void;
-  }
+export interface CollapseProps extends HTMLAttributes<HTMLOrSVGElement> {
+  className?: string
+  isShown?: boolean
+  children?: React.ReactNode
+  animationIn?: string
+  animationOut?: string
+  onClick?: () => void
+}
 
-  export interface AnimationProps   {
-    target: HTMLElement
-    animationName: string
-  }
+export interface AnimationProps {
+  target: HTMLElement
+  animationName: string
+}
 const defaultProps = {
-    isShown: true,
-    animationIn: 'fadeIn',
-    animationOut: 'fadeOut',
-  }
-export const Collapse: FC<CollapseProps> = ({
+  isShown: true,
+  animationIn: 'fadeIn',
+  animationOut: 'fadeOut',
+}
+export const Collapse: FC<CollapseProps & ColorProps> = ({
   className,
   children,
   isShown,
@@ -39,16 +48,15 @@ export const Collapse: FC<CollapseProps> = ({
   }
 
   useEffect(() => {
-    
-    const onEnd = ({ target, animationName }:AnimationEvent) => {
-        const castTarget = target as HTMLElement
+    const onEnd = ({ target, animationName }: AnimationEvent) => {
+      const castTarget = target as HTMLElement
       if (castTarget && animationName.indexOf('Out') > -1) {
         castTarget.classList.add('is-hidden')
       }
     }
-    const onStart = ({ target  }:AnimationEvent) => {
-        const castTarget = target as HTMLElement
-        castTarget.classList.remove('is-hidden')
+    const onStart = ({ target }: AnimationEvent) => {
+      const castTarget = target as HTMLElement
+      castTarget.classList.remove('is-hidden')
     }
     if (container && container.current) {
       container.current.addEventListener('animationend', onEnd)
@@ -61,10 +69,7 @@ export const Collapse: FC<CollapseProps> = ({
   }, [isShown])
 
   return (
-    <div
-      className={classnames('collapsed', className, animation)}
-      {...props}
-    >
+    <div className={classnames('collapsed', className, animation)} {...props}>
       {children}
     </div>
   )
@@ -73,9 +78,3 @@ export const Collapse: FC<CollapseProps> = ({
 Collapse.defaultProps = defaultProps
 
 export default Collapse
-
-
-
-
-
-

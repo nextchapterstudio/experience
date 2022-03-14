@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import classnames from 'classnames'
-import { useStyleSheet } from '@brightleaf/react-hooks/lib/use-stylesheet'
-import { useScript } from '@brightleaf/react-hooks/lib/use-script'
-import { useGet } from '@brightleaf/react-hooks/lib/use-get'
-
+import { useStyleSheet, useScript, useGet } from '@brightleaf/react-hooks'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import {
