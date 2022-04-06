@@ -72,11 +72,8 @@ export const Hero: FC<HeroBaseProps & HeroProps>  = ({
   })
   const kid = children as ReactElement
   const kids = React.Children.toArray(children)
-  console.log('kid?.type', kid?.type)
-  console.log('head', kid?.type !== HeroHead)
 
   if (kids.length === 1 && (kid?.type !== HeroBody && kid?.type !== HeroHead && kid?.type !== HeroFooter)) {
-    console.log('singly????', kid?.type)
     return (
       <HeroContext.Provider value={{ isInHero: true }}>
         <section

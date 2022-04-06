@@ -80,26 +80,6 @@ export const Button: FC<BaseProps & ButtonProps & ColorProps> = ({
     }),
   }
 
-  console.log(
-    'classes color',
-    Colors({
-      isPrimary,
-      isSuccess,
-      isInfo,
-      isWarning,
-      isDanger,
-      isLink,
-      isLight,
-      isDark,
-      isBlack,
-      isText,
-      isWhite,
-      isInverted,
-      isOutlined,
-      isSelected,
-    })
-  )
-  console.log('isSuccess', isSuccess)
   if (isStatic) {
     return (
       <span className={classnames('button', className, classes)} {...cleanProps('span', props)}>
