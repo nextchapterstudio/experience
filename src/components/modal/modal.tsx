@@ -5,7 +5,7 @@ import classnames from 'classnames'
 export const ModalContext = createContext({ isShown: false, closeModal: () => {} })
 
 export interface ModalCardHeadProps {
-  title: string
+  title?: string
   className?: string
 }
 export const ModalCardHead: FC<ModalCardHeadProps> = ({ title, className }) => {
@@ -28,6 +28,7 @@ export const ModalCardHead: FC<ModalCardHeadProps> = ({ title, className }) => {
 export interface ModalCardProps {
   children?: React.ReactNode
   className?: string
+  includeTrigger?: boolean
 }
 export const ModalCardBody: FC<ModalCardProps> = ({ children, className }) => {
   return <section className={classnames('modal-card-body', className)}>{children}</section>

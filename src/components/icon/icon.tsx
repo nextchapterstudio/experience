@@ -30,9 +30,9 @@ const rotation = ({
   return classes
 }
 export interface IconProps {
-  className: string
-  iconClassName: string
-  icon: string
+  className?: string
+  iconClassName?: string
+  icon?: string
   fas?: boolean
   fab?: boolean
   fa?: boolean

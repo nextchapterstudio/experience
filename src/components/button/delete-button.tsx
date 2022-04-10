@@ -10,14 +10,20 @@ export interface DeleteProps {
   isLarge?: boolean
 }
 
-export const Delete: FC<DeleteProps> = ({ className, onClick, isSmall, isMedium, isLarge }) => {
+export const DeleteButton: FC<DeleteProps> = ({
+  className,
+  onClick,
+  isSmall,
+  isMedium,
+  isLarge,
+}) => {
   const classes = Sizes({ isSmall, isMedium, isLarge })
   return <button className={classnames('delete', className, classes)} onClick={onClick}></button>
 }
 
-Delete.defaultProps = {
+DeleteButton.defaultProps = {
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   onClick: () => {},
 }
 
-export default Delete
+export default DeleteButton

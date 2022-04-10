@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Loader Component should render a div with the class loader 1`] = `
+<div
+  class="loader"
+>
+   
+</div>
+`;
+
+exports[`The Loader Component should render a div with the class loader and the className passed in 1`] = `
+<div
+  class="loader loader-test"
+/>
+`;

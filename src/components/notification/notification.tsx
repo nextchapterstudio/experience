@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState, forwardRef, useImperativeHandle, FC
 import classnames from 'classnames'
 import { Colors } from '../../utils/modifiers'
 import './notification.css'
+import '../../styles/animation.css'
 
 export interface NotificationProps {
   isShown: boolean

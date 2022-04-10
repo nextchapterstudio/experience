@@ -454,8 +454,53 @@ export const Responsive = ({
     'is-inline-flex-widescreen-only': isInlineFlexWideScreenOnly,
   }
 }
+export interface PositionProps {
+  isTop?: boolean
+  isBottom?: boolean
+  isRight?: boolean
+  isLeft?: boolean
+  isBottomLeft?: boolean
+  isBottomRight?: boolean
+  isTopLeft?: boolean
+  isTopRight?: boolean
+}
 
-// all ResponsiveProps | isSizedProps | BackgroundColorProps | ColorProps | HasTextProps | StyleOrStateProps | ScreenProps | SizeProps | SizeProp | FontWeightProps | TextHelpersProps
+export const Position = ({
+  isTop,
+  isBottom,
+  isRight,
+  isLeft,
+  isBottomLeft,
+  isBottomRight,
+  isTopLeft,
+  isTopRight,
+}: PositionProps) => {
+  return {
+    'is-top-right': isTopRight,
+    'is-bottom-left': isBottomLeft,
+    'is-top-left': isTopLeft,
+    'is-right': isRight,
+    'is-left': isLeft,
+    'is-top': isTop,
+    'is-bottom': isBottom,
+    'is-bottom-right': isBottomRight,
+  }
+}
+export interface AnimatedProps {
+  isAnimated?: boolean
+  isFadeIn?: boolean
+  isFadeOut?: boolean
+}
+
+export const Animated = ({ isAnimated, isFadeIn, isFadeOut }: AnimatedProps) => {
+  return {
+    animated: isAnimated,
+    fadeOut: isFadeOut,
+    fadeIn: isFadeIn,
+  }
+}
+
+// all ResponsiveProps | isSizedProps | BackgroundColorProps | ColorProps | HasTextProps | StyleOrStateProps | ScreenProps | SizeProps | SizeProp | FontWeightProps | TextHelpersProps | PositionProps
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const allTheClasses = (props: any) => {
@@ -472,5 +517,7 @@ export const allTheClasses = (props: any) => {
     ...FontWeight(props),
     ...Helpers(props),
     ...Responsive(props),
+    ...Position(props),
+    ...Animated(props),
   }
 }

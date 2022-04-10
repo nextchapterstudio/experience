@@ -17,7 +17,10 @@ const cleanProps = (tag: string, props: any) => {
       return objs
     }, {})
 }
-export const Button: FC<BaseProps & ButtonProps & ColorProps> = ({
+
+export const Button: FC<
+  ButtonProps & BaseButtonProps & ColorProps & HTMLAttributes<HTMLButtonElement>
+> = ({
   className,
   isPrimary,
   isSuccess,
@@ -157,7 +160,7 @@ export const Buttons: FC<ButtonsProps> = ({
   return <div className={classnames('buttons', className, sized)}>{children}</div>
 }
 
-export interface BaseProps extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
+export interface BaseButtonProps extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
   as?: ElementType
   children?: React.ReactNode
   className?: string
